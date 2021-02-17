@@ -7,7 +7,7 @@ var database,position;
 function preload(){
   backI=loadImage("HotAirBallon-01.png");
 
-  HBI=loadImage("HotAirBallon-02.png");
+  HBA=loadAnimation("HotAirBallon-02.png","HotAirBallon-03.png","HotAirBallon-04.png");
 }
 
 function setup() {
@@ -15,7 +15,7 @@ function setup() {
   createCanvas(1500,700);
   
   HB=createSprite(300, 200, 30, 30);
-  HB.addImage(HBI);
+  HB.addAnimation("flying",HBA);
   HB.scale=0.5;
 
   var ballpos=database.ref('Balloon/Position');
